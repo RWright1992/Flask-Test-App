@@ -26,4 +26,4 @@ class TestBase(TestCase):
 class TestView(TestBase):
     def test_home_get(self):
         reponse = self.client.get(url_for('home'))
-        self.assertEqual(response.staus_code, 200)
+        self.assertEqual(response.status_code, 200)
