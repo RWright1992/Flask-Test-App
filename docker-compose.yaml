@@ -1,9 +1,8 @@
 version: '3.8'
 services:
   flask-app:
-    environment:
-      DATABASE_URI: "${DATABASE_URI}"
-      SECRET_KEY: "${SECRET_KEY}"
+    env_file:
+    - /home/jenkins/.jenkins/.env
     image: rwright1992/flask-test-app:latest
     build: ./
     ports:
