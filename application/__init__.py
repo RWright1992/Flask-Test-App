@@ -10,7 +10,7 @@ from os import getenv
 # create a new instance of Flask and store it in app 
 app = Flask(__name__)
 #creating environment variable that will allow us to provide value for application configuration with db
-app.config['SQLALCHEMY_DATABASE_URI'] = str(os.getenv('DATABASE_URI'))
+app.config['SQLALCHEMY_DATABASE_URI'] = getenv('DATABASE_URI')
 #creating enviornment variable secrte key for Cross Site Request Forgery Protection
 app.config['SECRET_KEY'] = getenv('MY_SECRET_KEY')
 db = SQLAlchemy(app)
