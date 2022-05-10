@@ -1,12 +1,12 @@
 version: '3.8'
 services:
   flask-app:
-  image: rwright1992/flask-test-app:latest
-  build: ./
-  ports:
-  - target: 5000
-    published: 5000
-    protocol: tcp
-  enviornment:
-    DATABASE_URI: ${DATABASE_URI}
-    SECRET_KEY: ${SECRET_KEY}
+    image: rwright1992/flask-test-app:latest
+    build: ./
+    ports:
+    - target: 5000
+      published: 5000
+      protocol: tcp
+    enviornment:
+      DATABASE_URI: ${DATABASE_URI}
+      SECRET_KEY: ${SECRET_KEY}
