@@ -1,8 +1,9 @@
 version: '3.8'
 services:
   flask-app:
-    env_file:
-    - /home/jenkins/.jenkins/.env
+    environment:
+      DATABASE_URI:mysqlite:///data.db
+      MY_SECRET_KEY:shhhhhhh
     image: rwright1992/flask-test-app:latest
     build: ./
     ports:
