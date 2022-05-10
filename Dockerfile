@@ -6,7 +6,7 @@ RUN pip3 install -r requirements.txt
 
 EXPOSE 5000
 
-ENV DATABASE_URI=${DATABASE_URI} SECRET_KEY=${SECRET_KEY}
+ENV DATABASE_URI=sqlite:///data.db SECRET_KEY=SECRET
 
 RUN ["python3", "create.py"]
 
